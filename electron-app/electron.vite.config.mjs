@@ -12,8 +12,14 @@ export default defineConfig({
   renderer: {
     resolve: {
       alias: {
-        '@renderer': resolve('src/renderer/src')
+        '@renderer': resolve('src/renderer/src'),
+        '@store': resolve('src/renderer/src/store'),
+        '@router': resolve('src/renderer/src/router')
       }
+    },
+    server: {
+      port: 3000,
+      proxy: {}
     },
     plugins: [vue()]
   }
